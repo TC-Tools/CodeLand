@@ -4,104 +4,62 @@ body {
     min-height: 100vh;
 }
 
-.presentation-sidenav {
-    width: 90%;
-    margin: 1rem auto;
+.user-home {
+    position: relative;
+    margin-top: 1rem;
+    height: calc(100vh - 86px);
 }
 
+.navbar-home {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.navbar-home-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-home-item {
+    flex: 1;
+}
+
+.navbar-home-item a {
+    text-decoration: none;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar-home-item:hover > a svg path {
+    fill: white;
+}
+
+.navbar-home-item:hover > a .navbar-item-span {
+    color: white;
+}
+
+.navbar-item-span {
+    color: #aaa;
+    font-size: 12px;
+    user-select: none;
+}
+
+/* 
 h1 {
     font-weight: bold;
-}
-
-.option-selected {
-    background-color: #24385B;
-    padding: .75rem 1rem;
-    border-radius: 12px;
-}
-
-.nav-option-container {
-    position: relative;
-}
-
-.sidenav-option-container {
-    background-color: #24385B;
-    border-radius: 12px;
-    position: absolute;
-    top: calc(100% + 40px);
-    left: 0;
-    transform: scale(0);
-    width: 100%;
-    padding: 1rem;
-}
-
-@keyframes pop-in {
-    0% {
-        transform: scale(0);
-    }
-    50% {
-        transform: scale(1.2);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes pop-out {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.2);
-    }
-    100% {
-        transform: scale(0);
-    }
-}
-
-.sidenav-option-container.active, .sidenav-option-container.deactive {
-    transition: transform ease .3s;
-}
-
-.sidenav-option-container.active {
-    animation: pop-in .3s ease-in-out;
-    transform: scale(1);
-}
-
-.sidenav-option-container.deactive {
-    animation: pop-out .3s ease-in-out;
-    transform: scale(0);
-}
-
-.sidenav-option-container strong {
-    color: #aaa;
-}
-
-.options-sidenav {
-    list-style: none;
-}
-
-.option-sidenav {
-    padding: .75rem 0;
-    border-radius: 12px;
-    cursor: pointer;
-    color: #ccc;
-}
-
-.option-sidenav i svg path {
-    fill: #ccc;
-}
-
-.option-sidenav.active {
-    color: #fff;
-    fill: #fff;
-}
-.option-sidenav.active i svg path {
-    fill: #fff;
-}
-
-.option-sidenav + .option-sidenav {
-    margin-top: 1rem;
-}
+    font-size: 18px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 48ch;
+} */
 
 .projects {
     display: flex;
